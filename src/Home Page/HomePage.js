@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
+import "./HomePage.css"
 
 
 export const HomePage = () => {
@@ -58,7 +59,9 @@ export const HomePage = () => {
                         (favorite) => (
                             <section className="favoriteCard" key={`favorite--${favorite.id}`}>
                                 <header> {favorite.title}</header>
-                                <div> {favorite.image}</div>
+                                <img 
+                                    src={favorite.image}
+                                />
                                 <footer>
                                 </footer>
                             </section>
@@ -78,7 +81,9 @@ export const HomePage = () => {
                         (watch) => (
                             <section className="watchedCard" key={`watch--${watch.id}`}>
                                 <header> {watch.title}</header>
-                                <div> {watch.image}</div>
+                                <img 
+                                    src={watch.image}
+                                />
                                 <footer>
                                 </footer>
                             </section>

@@ -5,7 +5,7 @@ export const ChatForm = () => {
 
         const [chats, updateChats] = useState({
             title: "",
-            image: ""
+            image: "",
         })
 
         const navigate = useNavigate()
@@ -20,7 +20,7 @@ export const ChatForm = () => {
         const movieToSendToAPI = {
             userId: filmUserObject.id, 
             title: chats.title, 
-            image: chats.image
+            image: chats.image,
         }
 
          fetch(`http://localhost:8088/Chats`, {
@@ -81,7 +81,7 @@ export const ChatForm = () => {
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="button">
-                submit Chat
+                Create
             </button>
 
         </form>

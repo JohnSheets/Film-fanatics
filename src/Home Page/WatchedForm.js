@@ -22,13 +22,13 @@ export const WatchedForm = () => {
         const movieToSendToAPI = {
             userId: filmUserObject.id, 
             title: watched.title, 
-            rating: watched.rating,
-            image: watched.imageURL,
+            // rating: watched.rating,
+            image: watched.image,
             watchAgain: watched.watchAgain
         }
 
         fetch (`http://localhost:8088/WatchedMovies`, {
-            methdo: "POST", 
+            method: "POST", 
             headers: {
                 "Content-Type": "application/json"
             },
@@ -37,7 +37,7 @@ export const WatchedForm = () => {
 
         .then(response => response.json())
         .then(() => {
-            navigate("/home")
+            navigate("/WatchedMovies")
         })
 
     }
@@ -78,6 +78,20 @@ export const WatchedForm = () => {
                                         copy.image = evt.target.value
                                         updateWatched(copy)
                                 }
+                        } />
+                </div>
+            </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="watchAgian">Watch Agian?</label>
+                    <input type="checkbox"
+                        value={watched.watchAgain}
+                        onChange={
+                            (event) =>{
+                                const copy = {...watched}
+                                copy.emergency = event.target.checked
+                                updateWatched(copy)
+                            }
                         } />
                 </div>
             </fieldset>

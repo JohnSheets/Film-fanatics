@@ -1,4 +1,4 @@
-.card-list {
+/* .card-list {
     display: flex;
   }
   
@@ -7,10 +7,10 @@
     margin: 0 10px;
   }
   
-  /* .card img {
+  .card img {
     width: 200px;
     height: 300px;
-  } */
+  }
   
   .card button {
     margin-top: 10px;
@@ -49,4 +49,34 @@
   .btn:hover {
     background-color: #555;
   }
-  
+   */
+
+   img {
+    height: 200px;
+    width: 200px;
+   }
+
+   .join_Button{
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+   }
+
+   .ChatPage {
+    display:flex
+   }
+
+   .chat {
+    text-align: center;
+    margin: 0 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    overflow: hidden;
+   }
+   
