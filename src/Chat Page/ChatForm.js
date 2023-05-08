@@ -23,7 +23,7 @@ export const ChatForm = () => {
             image: chats.image,
         }
 
-         fetch(`http://localhost:8088/Chats`, {
+         fetch(`http://localhost:8088/TopFives`, {
                 method: "POST",
                 headers: {
                         "Content-Type": "application/json"
@@ -32,7 +32,7 @@ export const ChatForm = () => {
         })
                 .then(response => response.json())
                 .then(() => {
-                        navigate("/moviechat")
+                        navigate("/TopFives")
         })
 
 

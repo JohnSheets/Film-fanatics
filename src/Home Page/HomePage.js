@@ -10,13 +10,6 @@ export const HomePage = () => {
     const [watched, setWatched] = useState([])
 
 
-    const fetchFavorites = () => {
-        return fetch(`http://localhost:8088/Favorites`)
-        .then(response => response.json())
-        .then((favoriteArray) => {
-             setFavorites(favoriteArray)
-        })
-    }
         useEffect(
             () => {
                fetch(`http://localhost:8088/Favorites`)
@@ -28,14 +21,6 @@ export const HomePage = () => {
             [] // When this array is empty, you are observing initial component state
         )
 
-        const fetchWatched = () => {
-            return fetch(`http://localhost:8088/WatchedMovies`)
-            .then(response => response.json())
-            .then((watchedArray) => {
-                 setWatched(watchedArray)
-            })
-        }
-    
         useEffect(
             () => {
                fetch(`http://localhost:8088/WatchedMovies`)
@@ -46,7 +31,6 @@ export const HomePage = () => {
             },
             [] 
         )
-
 
 
     return<>
@@ -85,6 +69,11 @@ export const HomePage = () => {
                                     src={watch.image}
                                 />
                                 <footer>
+                                    <p> Watch Again? &nbsp;
+                                {watch.watchAgain === true ? 
+                                    "✅": 
+                                    "❌" }
+                                    </p>
                                 </footer>
                             </section>
                         )
@@ -97,3 +86,14 @@ export const HomePage = () => {
         </div>  </>
     
 }
+
+// if (watch.watchAgian === true) {
+//     console.log("✅")
+// } else {
+//     console.log("❌")
+// }
+
+
+// (watch.watchAgian === true) ? 
+//     console.log("✅") :
+//     console.log("❌") ;

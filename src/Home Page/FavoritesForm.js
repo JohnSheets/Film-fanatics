@@ -5,7 +5,8 @@ export const FavoriteForm = () => {
 
         const [favorites, updateFavorites] = useState({
             title: "",
-            image: ""
+            image: "",
+            rating: ""
         })
 
         const navigate = useNavigate()
@@ -40,7 +41,7 @@ export const FavoriteForm = () => {
 
     return <>
         <form className="favoriteForm">
-            <h2 className="favoritForm_title">New Favorite Movie</h2>
+            <h2 className="favoriteForm_title">New Favorite Movie</h2>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="description">Movie Title:</label>
@@ -77,6 +78,18 @@ export const FavoriteForm = () => {
                         } />
                 </div>
             </fieldset>
+            <fieldset>
+                <div className="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Rating</button>
+                 <div id="myDropdown" class="dropdown-content">
+                        <option value="1">⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                    </div>
+                </div>
+            </fieldset>
 
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
@@ -88,3 +101,4 @@ export const FavoriteForm = () => {
     </>
 
 }
+

@@ -62,19 +62,17 @@
       "id": 1,
       "userUd": 1,
       "title": "",
-      "imagesURL": "",
-      "rating": 1,
+      "image": "",
       "watchAgain": true
     },
     {
-      "title": "Baby Driver",
+      "title": "Baby Driver ",
       "image": "https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_.jpg",
+      "watchAgain": true,
       "id": 2
     },
     {
-      "title": "Rocky",
-      "image": "https://www.filmsite.org/posters/rocky5.jpg",
-      "watchAgain": true,
+      "title": "test movie",
       "id": 3
     }
   ],
@@ -84,6 +82,24 @@
       "userId": 1,
       "chatId": 1,
       "chat": "Hello everyone"
+    },
+    {
+      "userId": 1,
+      "chat": "I liked this movie a lot ",
+      "chatId": 1,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "chat": "I think the matrix is pretty cool",
+      "chatId": 3,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "chat": "Men in Black was mid, ngl",
+      "chatId": 2,
+      "id": 4
     }
   ]
 }

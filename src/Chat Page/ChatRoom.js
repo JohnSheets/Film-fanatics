@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router"
+import { useNavigate, useParams } from "react-router"
 
-export const ChatRoom = ({updateMessages}) => {
+export const ChatRoom = (chatIdState) => {
     
     const [message, update] = useState({
         chat: "",
@@ -9,20 +9,21 @@ export const ChatRoom = ({updateMessages}) => {
 
     const navigate = useNavigate()
 
+
     const localFilmUser = localStorage.getItem("Film_user")
-    const filmUserObject = JSON.stringify(localFilmUser)
+    const filmUserObject = JSON.parse(localFilmUser)
 
 
     const handleSaveButtonClick = (event) => {
         // event.preventDefault()
-        
 
         // TODO: Create the object to be saved to the API
 
 
         const chatToSendToAPI = {
             userId: filmUserObject.id, 
-            chat: message.chat
+            chat: message.chat,
+            chatId: +chatIdState.chatId
         }
     
 
@@ -35,7 +36,7 @@ export const ChatRoom = ({updateMessages}) => {
             body: JSON.stringify(chatToSendToAPI)
         })
         .then(response => response.json())
-        .then((messageArray) => { updateMessages(messageArray) })
+        // .then((messageArray) => { updateMessages(messageArray) })
         .then(() => {update({
             chat: "",
         })})
@@ -45,6 +46,7 @@ export const ChatRoom = ({updateMessages}) => {
 
     return (
     <form className="chatForm">
+        {console.log(chatIdState)}
         <fieldset>
             <input 
                 required autoFocus

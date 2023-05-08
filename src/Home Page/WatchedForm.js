@@ -7,7 +7,7 @@ export const WatchedForm = () => {
             title: "",
             rating: "",
             imageURL: "",
-            watchAgain: true
+            watchAgain: Boolean
         })
 
         const navigate = useNavigate()

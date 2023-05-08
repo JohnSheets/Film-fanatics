@@ -17,8 +17,8 @@ export const ApplicationViews = () => {
 	</>
 	}>
 		<Route path="/chatRoom/:chatId" element={ <ChatList/> } />
-		{/* <Route path="/chatRoom" element={ <ChatRoom/> } /> */}
-		<Route path="/chatForm" element={ <ChatForm/> } />
+		{/* <Route path="/chatRoom/" element={ <ChatRoom/> } /> */}
+		<Route path="/chatForm/" element={ <ChatForm/> } />
 		<Route path="/moviechat" element={ <ChatPage/> } />
 		<Route path="/favoriteForm" element={ <FavoriteForm/> } />
 		<Route path="/watchedForm" element={ <WatchedForm/> } />
