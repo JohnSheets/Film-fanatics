@@ -1,6 +1,7 @@
-import { useState, useNavigate } from "react"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
-export const TopFiveList = () => {
+export const TopFiveForm = () => {
 
         const [topFive, updateTopFive] = useState({
             titleOne: "",
@@ -19,7 +20,7 @@ export const TopFiveList = () => {
             // event.preventDefult()
     
     
-            const movieToSendToAPI = {
+            const moviesToSendToAPI = {
                 userId: filmUserObject.id, 
                 titleOne: topFive.titleOne,
                 titleTwo: topFive.titleTwo,
@@ -28,16 +29,16 @@ export const TopFiveList = () => {
                 titleFive: topFive.titleFive 
             }
     
-             fetch(`http://localhost:8088/Favorites`, {
+             fetch(`http://localhost:8088/TopFives`, {
                     method: "POST",
                     headers: {
                             "Content-Type": "application/json"
                     },
-                    body: JSON.stringify(movieToSendToAPI)
+                    body: JSON.stringify(moviesToSendToAPI)
             })
                     .then(response => response.json())
                     .then(() => {
-                            navigate("/Favorites")
+                            navigate("/TopFives") // set up route in application views
             })
     
     
@@ -53,12 +54,11 @@ export const TopFiveList = () => {
                                 type="text"
                                 className="form-control"
                                 placeholder="Movie Title"
-                                value={topFive.title}
                                 onChange={
                                         (evt) => {
-                                                const copy = {...favorites}
+                                                const copy = {...topFive}
                                                 copy.title = evt.target.value
-                                                updateFavorites(copy)
+                                                updateTopFive(copy)
                                         }
                                 } />
                         </div>
@@ -70,12 +70,11 @@ export const TopFiveList = () => {
                                 type="text"
                                 className="form-control"
                                 placeholder="Movie Title"
-                                value={topFive.title}
                                 onChange={
                                         (evt) => {
-                                                const copy = {...favorites}
+                                                const copy = {...topFive}
                                                 copy.title = evt.target.value
-                                                updateFavorites(copy)
+                                                updateTopFive(copy)
                                         }
                                 } />
                         </div>
@@ -87,12 +86,11 @@ export const TopFiveList = () => {
                                 type="text"
                                 className="form-control"
                                 placeholder="Movie Title"
-                                value={topFive.title}
                                 onChange={
                                         (evt) => {
-                                                const copy = {...favorites}
+                                                const copy = {...topFive}
                                                 copy.title = evt.target.value
-                                                updateFavorites(copy)
+                                                updateTopFive(copy)
                                         }
                                 } />
                         </div>
@@ -104,12 +102,11 @@ export const TopFiveList = () => {
                                 type="text"
                                 className="form-control"
                                 placeholder="Movie Title"
-                                value={topFive.title}
                                 onChange={
                                         (evt) => {
-                                                const copy = {...favorites}
+                                                const copy = {...topFive}
                                                 copy.title = evt.target.value
-                                                updateFavorites(copy)
+                                                updateTopFive(copy)
                                         }
                                 } />
                         </div>
@@ -121,12 +118,11 @@ export const TopFiveList = () => {
                                 type="text"
                                 className="form-control"
                                 placeholder="Movie Title"
-                                value={topFive.title}
                                 onChange={
                                         (evt) => {
-                                                const copy = {...favorites}
+                                                const copy = {...topFive}
                                                 copy.title = evt.target.value
-                                                updateFavorites(copy)
+                                                updateTopFive(copy)
                                         }
                                 } />
                         </div>

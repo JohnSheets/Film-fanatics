@@ -36,8 +36,8 @@ export const HomePage = () => {
     return<>
 
         <div>
-        <header>Favorites</header>
             <article className="Favorites">
+            <header>Favorites</header>
                 {
                     favorites.map(
                         (favorite) => (
@@ -58,8 +58,8 @@ export const HomePage = () => {
             </article>
         </div>  
             <div>
-            <header>Watched</header>
             <article className="Watched">
+            <header>Watched</header>
                 {
                     watched.map(
                         (watch) => (

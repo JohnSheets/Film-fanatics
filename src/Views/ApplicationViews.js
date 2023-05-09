@@ -3,6 +3,8 @@ import { ChatForm } from "../Chat Page/ChatForm.js"
 import { ChatList } from "../Chat Page/ChatList.js"
 import { ChatPage } from "../Chat Page/ChatPage.js"
 import { ChatRoom } from "../Chat Page/ChatRoom.js"
+import { ExplorePage } from "../Explore Page/ExplorePage.js"
+import { TopFiveForm, } from "../Explore Page/TopFiveForm.js"
 import { FavoriteForm } from "../Home Page/FavoritesForm.js"
 import { HomePage } from "../Home Page/HomePage.js"
 import { WatchedForm } from "../Home Page/WatchedForm.js"
@@ -16,6 +18,8 @@ export const ApplicationViews = () => {
 	<Outlet />
 	</>
 	}>
+		<Route path="/TopFiveForm" element={ <TopFiveForm/> } />
+		<Route path="/explore" element={ <ExplorePage/> } />
 		<Route path="/chatRoom/:chatId" element={ <ChatList/> } />
 		{/* <Route path="/chatRoom/" element={ <ChatRoom/> } /> */}
 		<Route path="/chatForm/" element={ <ChatForm/> } />

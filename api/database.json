@@ -10,11 +10,11 @@
     {
       "id": 1,
       "userId": 1,
-      "Title 1": "",
-      "Title 2": "",
-      "Title 3": "",
-      "Title 4": "",
-      "Title 5": ""
+      "titleOne": "Avatar",
+      "titleTwo": "Avengers: Endgame",
+      "titleThree": "Titanic",
+      "titleFour": "Star Wars: Episode VII - The Force Awakens",
+      "titleFive": "Spider-Man: No Way Home"
     }
   ],
   "Chats": [

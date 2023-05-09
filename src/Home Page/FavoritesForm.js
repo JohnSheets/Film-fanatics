@@ -1,12 +1,13 @@
 import { useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
+import Dropdown from 'react-bootstrap/Dropdown';
 
 export const FavoriteForm = () => {
 
         const [favorites, updateFavorites] = useState({
             title: "",
             image: "",
-            rating: ""
+            // rating: ""
         })
 
         const navigate = useNavigate()
@@ -80,21 +81,26 @@ export const FavoriteForm = () => {
             </fieldset>
             <fieldset>
                 <div className="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Rating</button>
-                 <div id="myDropdown" class="dropdown-content">
-                        <option value="1">⭐</option>
-                        <option value="2">⭐⭐</option>
-                        <option value="3">⭐⭐⭐</option>
-                        <option value="4">⭐⭐⭐⭐</option>
-                        <option value="5">⭐⭐⭐⭐⭐</option>
-                    </div>
-                </div>
+                <div class="dropdown">
+                <Dropdown>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+        Rating
+      </Dropdown.Toggle>
+<Dropdown.Menu>    
+    <li><a class="dropdown-item">⭐</a></li>
+    <li><a class="dropdown-item">⭐⭐</a></li>
+    <li><a class="dropdown-item">⭐⭐⭐</a></li>
+    <li><a class="dropdown-item">⭐⭐⭐⭐</a></li>
+    <li><a class="dropdown-item">⭐⭐⭐⭐⭐</a></li>
+</Dropdown.Menu>
+</Dropdown>
+</div>  </div>
             </fieldset>
 
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="button">
-                submit Movie
+                Submit Movie
             </button>
 
         </form>
@@ -102,3 +108,21 @@ export const FavoriteForm = () => {
 
 }
 
+
+// function BasicExample() {
+//   return (
+//     <Dropdown>
+//       <Dropdown.Toggle variant="success" id="dropdown-basic">
+//         Dropdown Button
+//       </Dropdown.Toggle>
+
+// //       <Dropdown.Menu>
+// //         <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+// //         <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+// //         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+// //       </Dropdown.Menu>
+// //     </Dropdown>
+// //   );
+// }
+
+// export default BasicExample;

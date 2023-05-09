@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router"
+import "./ChatRoom.css"
 
 export const ChatRoom = (chatIdState) => {
     

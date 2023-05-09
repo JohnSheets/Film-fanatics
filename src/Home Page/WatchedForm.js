@@ -22,7 +22,6 @@ export const WatchedForm = () => {
         const movieToSendToAPI = {
             userId: filmUserObject.id, 
             title: watched.title, 
-            // rating: watched.rating,
             image: watched.image,
             watchAgain: watched.watchAgain
         }
@@ -83,7 +82,7 @@ export const WatchedForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="watchAgian">Watch Agian?</label>
+                    <label htmlFor="watchAgian">Watch Again?</label>
                     <input type="checkbox"
                         value={watched.watchAgain}
                         onChange={
@@ -99,7 +98,7 @@ export const WatchedForm = () => {
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="button">
-                submit Movie
+                Submit Movie
             </button>
 
         </form>
